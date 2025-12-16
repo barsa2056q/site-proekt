@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+main {
+    padding: 40px 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1em;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FF6B6B;
+}
+
+.distance-info {
+    background: #f0f4ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #FF6B6B;
+}
+
+.distance-info p {
+    color: #555;
+    font-size: 0.95em;
+    margin: 8px 0;
+}
+
+.route-map {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #FF6B6B;
+}
+
+.route-map h3 {
+    color: #FF6B6B;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+#routeText {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.price-box {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+    border: 2px dashed #FF6B6B;
+}
+
+.price-box h3 {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.price {
+    font-size: 2.5em;
+    color: #FF6B6B;
+    font-weight: bold;
+}
+
+.btn-order {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-order:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-order:active {
+    transform: translateY(0);
+}
+
+.success-message {
+    background: #e8f5e9;
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.success-message h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.success-message p {
+    color: #555;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+#orderDetails {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #666;
+}
+
+footer {
+    background: #f5f5f5;
+    padding: 15px;
+    text-align: center;
+    color: #999;
+    font-size: 0.85em;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Стиль уведомления о приезде такси */
+.arrival-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: slideDown 0.5s ease-out;
+    max-width: 90%;
+    width: 100%;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.notification-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.notification-content h2 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.notification-content p {
+    color: #666;
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+.btn-close {
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn-close:hover {
+    background: #FF8E53;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    main {
+        padding: 25px 20px;
+    }
+
+    .price {
+        font-size: 2em;
+    }
+
+    .btn-order {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
